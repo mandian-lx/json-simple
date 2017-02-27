@@ -1,3 +1,5 @@
+%{?_javapackages_macros:%_javapackages_macros}
+
 %define commit a8b94b79b697df64b23428c27d65d6a187e9ebf9
 %define shortcommit %(c=%{commit}; echo ${c:0:7})
 
@@ -18,9 +20,6 @@ BuildRequires:	maven-local
 BuildRequires:	mvn(junit:junit)
 BuildRequires:	mvn(org.apache.felix:maven-bundle-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
-
-Requires:	java-headless
-Requires:	javapackages-tools
 
 %description
 json-simple is a simple Java implementation of D-Bus.
